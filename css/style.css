@@ -53,12 +53,14 @@ h1 {
 .categories h1 {
   margin: 1.5rem 0;
   font-size: 2rem;
+  text-transform: uppercase;
 }
 
 .category_list_container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
+  text-transform: uppercase;
 }
 
 .category_card {
