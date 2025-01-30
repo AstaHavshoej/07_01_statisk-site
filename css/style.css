@@ -18,7 +18,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #f8f8f8;
+  /* background-color: #f8f8f8; */
   border-bottom: 1px solid #ddd;
 }
 
@@ -32,6 +32,8 @@ nav ul li a {
   text-decoration: none;
   color: black;
   font-weight: bold;
+  text-transform: uppercase;
+  font-weight: lighter;
 }
 
 /* *************** Main Section **************** */
@@ -53,12 +55,14 @@ h1 {
 .categories h1 {
   margin: 1.5rem 0;
   font-size: 2rem;
+  text-transform: uppercase;
 }
 
 .category_list_container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
+  text-transform: uppercase;
 }
 
 .category_card {
@@ -102,7 +106,9 @@ h1 {
 /* Product card */
 .product_card {
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-row: span 1; /* Sikrer ensartet højde */
+  align-items: start; /* Holder elementer justeret til toppen */
+  grid-template-rows: auto 1fr auto; /* Bevarer dit nuværende layout */
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -110,6 +116,7 @@ h1 {
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%; /* Gør alle kort lige høje */
 }
 
 .product_card:hover {
@@ -187,4 +194,40 @@ h1 {
   cursor: not-allowed;
   opacity: 0.6;
   transition: all 0.3s ease;
+}
+.old_price {
+  text-decoration: line-through;
+  color: #b12704;
+  font-size: 1em;
+  margin-right: 5px;
+}
+
+.new_price {
+  color: #007600;
+  font-size: 1em;
+}
+
+.discount {
+  background: #b12704;
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.9em;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.product_card.sold_out {
+  opacity: 0.4;
+}
+
+.sold_out_label {
+  align-self: center;
+  background: linear-gradient(135deg, #b12704, #8b0000);
+  color: white;
+  padding: 6px 12px;
+  font-size: 0.8em; /* Mindre skrift */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  text-align: center;
 }
