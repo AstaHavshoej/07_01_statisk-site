@@ -91,7 +91,7 @@ h1 {
   gap: 1.5rem;
 }
 
-.product-container {
+.product_container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
